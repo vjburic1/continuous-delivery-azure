@@ -24,14 +24,3 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-name: Stage the app
-
-on:
-  pull_request:
-    types: [labeled]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    if: contains(github.event.pull_request.labels.*.name, 'stage')
